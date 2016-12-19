@@ -53,7 +53,7 @@
     {{#if options}}
       <div class="date-picker__options">
         {{#each _options as |option|}}
-          <button {{action option.action option.actionValue}} class="date-picker__options__button {{option.classes}}">
+          <button {{action option.action option.actionValue}} class="btn btn-default-new btn-sm btn-block {{option.classes}}">
             {{option.label}}
           </button>
         {{/each}}
