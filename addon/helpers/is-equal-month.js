@@ -6,7 +6,7 @@ const {
 } = Ember;
 
 export function isEqualMonth([m1, m2]) {
-  if (getTypeOf(m1) !== 'instance' || getTypeOf(m2) !== 'instance') {
+  if (getTypeOf(m1) !== 'object' || getTypeOf(m2) !== 'object') {
     return false;
   }
   return m1.format('YYYY-MM') === m2.format('YYYY-MM');

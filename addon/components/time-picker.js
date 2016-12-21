@@ -442,7 +442,7 @@ export default Component.extend({
     let format = get(this, 'format');
 
     value = this.parseTime(value);
-    value = (getTypeOf(value) === 'instance') ? value.format(format) : value;
+    value = (getTypeOf(value) === 'object') ? value.format(format) : value;
     set(this, 'stringValue', value || null);
   },
 

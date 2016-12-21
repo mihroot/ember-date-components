@@ -6,7 +6,7 @@ const {
 } = Ember;
 
 export function isEqualTime([d1, d2]) {
-  if (getTypeOf(d1) !== 'instance' || getTypeOf(d2) !== 'instance') {
+  if (getTypeOf(d1) !== 'object' || getTypeOf(d2) !== 'object') {
     return false;
   }
 

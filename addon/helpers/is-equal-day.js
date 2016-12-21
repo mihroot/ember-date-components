@@ -8,7 +8,7 @@ const {
 export function isEqualDay([d1, d2]) {
   if (getTypeOf(d2) === 'array') {
     return d2.find((d2) => {
-      if (getTypeOf(d1) !== 'instance' || getTypeOf(d2) !== 'instance') {
+      if (getTypeOf(d1) !== 'object' || getTypeOf(d2) !== 'object') {
         return false;
       }
 
@@ -16,7 +16,7 @@ export function isEqualDay([d1, d2]) {
     });
   }
 
-  if (getTypeOf(d1) !== 'instance' || getTypeOf(d2) !== 'instance') {
+  if (getTypeOf(d1) !== 'object' || getTypeOf(d2) !== 'object') {
     return false;
   }
   return d1.format('YYYY-MM-DD') === d2.format('YYYY-MM-DD');
