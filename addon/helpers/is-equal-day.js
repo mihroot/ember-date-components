@@ -16,7 +16,7 @@ export function isEqualDay([d1, d2]) {
     });
   }
 
-  if (getTypeOf(d1) !== 'object' || getTypeOf(d2) !== 'object') {
+  if (getTypeOf(d1) !== 'object' || getTypeOf(d2) !== 'instance') {
     return false;
   }
   return d1.format('YYYY-MM-DD') === d2.format('YYYY-MM-DD');
